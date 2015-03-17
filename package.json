@@ -1,0 +1,13 @@
+{
+  "name": "level-codec",
+  "repository": "Level/codec",
+  "version": "1.0.0",
+  "description": "Levelup's encoding logic",
+  "license": "MIT",
+  "devDependencies": {
+    "tape": "^3.5.0"
+  },
+  "scripts": {
+    "test": "make test"
+  }
+}
