@@ -13,3 +13,5 @@ __WIP__
 ### .encodings
 ### .decodeKey(key, optionObjects)
 ### .decodeValue(value, optionObjects)
+### .keyAsBuffer(optionObjects)
+### .valueAsBuffer(optionObjects)
