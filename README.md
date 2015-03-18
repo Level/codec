@@ -9,7 +9,7 @@ __WIP__
 
 ### .encodeKey(key, optionObjects)
 ### .encodeValue(value, optionObjects)
-### .encodeBatch(batch, batchOptions, dbOptions)
+### .encodeBatch(batch, optionObjects)
 ### .encodings
 ### .decodeKey(key, optionObjects)
 ### .decodeValue(value, optionObjects)
