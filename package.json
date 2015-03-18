@@ -1,7 +1,7 @@
 {
   "name": "level-codec",
   "repository": "Level/codec",
-  "version": "1.2.1",
+  "version": "2.0.0",
   "description": "Levelup's encoding logic",
   "license": "MIT",
   "devDependencies": {
