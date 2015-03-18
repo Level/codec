@@ -11,3 +11,5 @@ __WIP__
 ### .encodeValue(value, optionObjects)
 ### .encodeBatch(batch, batchOptions, dbOptions)
 ### .encodings
+### .decodeKey(key, optionObjects)
+### .decodeValue(value, optionObjects)
