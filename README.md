@@ -1,7 +1,11 @@
 
 # level-codec
 
-Levelup's encoding logic.
+<img alt="LevelDB Logo" height="100" src="http://leveldb.org/img/logo.svg">
+
+**[LevelUP's](https://github.com/rvagg/node-levelup) encoding logic.**
+
+[![Build Status](https://travis-ci.org/Level/codec.png)](https://travis-ci.org/Level/codec)
 
 __WIP__
 
@@ -15,3 +19,13 @@ __WIP__
 ### .decodeValue(value, optionObjects)
 ### .keyAsBuffer(optionObjects)
 ### .valueAsBuffer(optionObjects)
+
+## Publishers
+
+* [@juliangruber](https://github.com/juliangruber)
+
+## License &amp; copyright
+
+Copyright (c) 2012-2015 LevelUP contributors.
+
+LevelUP is licensed under the MIT license. All rights not explicitly granted in the MIT license are reserved. See the included LICENSE.md file for more details.
