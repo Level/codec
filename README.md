@@ -23,6 +23,7 @@ __WIP__
 ## Publishers
 
 * [@juliangruber](https://github.com/juliangruber)
+* [@ralphtheninja](https://github.com/ralphtheninja)
 
 ## License &amp; copyright
 
