@@ -7,6 +7,9 @@ test('encode key', function(t){
   var buf = codec.encodeKey('686579', {});
   t.equal(buf.toString(), 'hey');
 
+  buf = codec.encodeKey('686579');
+  t.equal(buf.toString(), 'hey');
+
   buf = codec.encodeKey('686579', {
     keyEncoding: 'binary'
   });
@@ -19,6 +22,9 @@ test('encode value', function(t){
   var codec = new Codec({ valueEncoding: 'hex' });
 
   var buf = codec.encodeValue('686579', {});
+  t.equal(buf.toString(), 'hey');
+
+  buf = codec.encodeValue('686579');
   t.equal(buf.toString(), 'hey');
 
   buf = codec.encodeValue('686579', {
@@ -35,6 +41,9 @@ test('decode key', function(t){
   var buf = codec.decodeKey(new Buffer('hey'), {});
   t.equal(buf, '686579');
 
+  buf = codec.decodeKey(new Buffer('hey'));
+  t.equal(buf, '686579');
+
   buf = codec.decodeKey(new Buffer('hey'), {
     keyEncoding: 'binary'
   });
@@ -47,6 +56,9 @@ test('decode value', function(t){
   var codec = new Codec({ valueEncoding: 'hex' });
 
   var buf = codec.decodeValue(new Buffer('hey'), {});
+  t.equal(buf, '686579');
+
+  buf = codec.decodeValue(new Buffer('hey'));
   t.equal(buf, '686579');
 
   buf = codec.decodeValue(new Buffer('hey'), {

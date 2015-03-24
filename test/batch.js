@@ -18,6 +18,12 @@ test('batch', function(t){
     { type: 'put', key: 'json', value: '{}' }
   ]);
 
+  encoded = codec.encodeBatch(ops);
+  t.deepEqual(encoded, [
+    { type: 'put', key: 'string', value: 'string' },
+    { type: 'put', key: 'json', value: {} }
+  ]);
+
   t.end();
 });
 

@@ -19,31 +19,31 @@
 var codec = new Codec(db.options);
 ```
 
-### #encodeKey(key, opts)
+### #encodeKey(key[, opts])
 
   Encode `key` with given `opts`.
 
-### #encodeValue(value, opts)
+### #encodeValue(value[, opts])
 
   Encode `value` with given `opts`.
 
-### #encodeBatch(batch, opts)
+### #encodeBatch(batch[, opts])
 
   Encode `batch` ops with given `opts`.
 
-### #decodeKey(key, opts)
+### #decodeKey(key[, opts])
 
   Decode `key` with given `opts`.
 
-### #decodeValue(value, opts)
+### #decodeValue(value[, opts])
 
   Decode `value` with given `opts`.
 
-### #keyAsBuffer(opts)
+### #keyAsBuffer([opts])
 
   Check whether `opts` and the global `opts` call for a binary key encoding.
 
-### #valueAsBuffer(opts)
+### #valueAsBuffer([opts])
 
   Check whether `opts` and the global `opts` call for a binary value encoding.
 

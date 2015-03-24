@@ -15,13 +15,13 @@ Codec.prototype._encoding = function(encoding){
 
 Codec.prototype._keyEncoding = function(opts, batchOpts){
   return this._encoding(batchOpts && batchOpts.keyEncoding
-    || opts.keyEncoding
+    || opts && opts.keyEncoding
     || this.opts.keyEncoding);
 };
 
 Codec.prototype._valueEncoding = function(opts, batchOpts){
   return this._encoding(batchOpts && batchOpts.valueEncoding
-    || opts.valueEncoding
+    || opts && opts.valueEncoding
     || this.opts.valueEncoding);
 };
 
