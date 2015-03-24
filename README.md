@@ -9,7 +9,7 @@
 
 ## API
 
-### Codec(opts)
+### Codec([opts])
 
   Create a new codec, with a global options object.
 

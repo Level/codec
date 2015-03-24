@@ -3,7 +3,7 @@ var encodings = require('./lib/encodings');
 module.exports = Codec;
 
 function Codec(opts){
-  this.opts = opts;
+  this.opts = opts || {};
   this.encodings = encodings;
 }
 
