@@ -7,18 +7,60 @@
 
 [![Build Status](https://travis-ci.org/Level/codec.png)](https://travis-ci.org/Level/codec)
 
-__WIP__
-
 ## API
 
-### .encodeKey(key, optionObjects)
-### .encodeValue(value, optionObjects)
-### .encodeBatch(batch, optionObjects)
-### .encodings
-### .decodeKey(key, optionObjects)
-### .decodeValue(value, optionObjects)
-### .keyAsBuffer(optionObjects)
-### .valueAsBuffer(optionObjects)
+### Codec(opts)
+
+  Create a new codec, with a global options object.
+
+  This could be something like
+
+```js
+var codec = new Codec(db.options);
+```
+
+### #encodeKey(key, opts)
+
+  Encode `key` with given `opts`.
+
+### #encodeValue(value, opts)
+
+  Encode `value` with given `opts`.
+
+### #encodeBatch(batch, opts)
+
+  Encode `batch` ops with given `opts`.
+
+### #decodeKey(key, opts)
+
+  Decode `key` with given `opts`.
+
+### #decodeValue(value, opts)
+
+  Decode `value` with given `opts`.
+
+### #keyAsBuffer(opts)
+
+  Check whether `opts` and the global `opts` call for a binary key encoding.
+
+### #valueAsBuffer(opts)
+
+  Check whether `opts` and the global `opts` call for a binary value encoding.
+
+### #encodings
+
+  The supported encodings as object of form
+
+```js
+{
+  "name": {
+    "encode": Function,
+    "decode": Function,
+    "buffer": Boolean,
+    "type": String
+  }
+}
+```
 
 ## Publishers
 
