@@ -59,6 +59,19 @@ Codec.prototype.encodeBatch = function(ops, opts){
   });
 };
 
+var ltgtKeys = ['lt', 'gt', 'lte', 'gte', 'start', 'end'];
+
+Codec.prototype.encodeLtgt = function(ltgt, opts){
+  var self = this;
+  var ret = {};
+  Object.keys(ltgt).forEach(function(key){
+    ret[key] = ltgtKeys.indexOf(key) > -1
+      ? self.encodeKey(ltgt[key], opts)
+      : ltgt[key]
+  });
+  return ret;
+};
+
 Codec.prototype.keyAsBuffer = function(opts){
   return this._keyEncoding(opts).buffer;
 };
