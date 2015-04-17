@@ -61,12 +61,12 @@ Codec.prototype.encodeBatch = function(ops, opts){
 
 var ltgtKeys = ['lt', 'gt', 'lte', 'gte', 'start', 'end'];
 
-Codec.prototype.encodeLtgt = function(ltgt, opts){
+Codec.prototype.encodeLtgt = function(ltgt){
   var self = this;
   var ret = {};
   Object.keys(ltgt).forEach(function(key){
     ret[key] = ltgtKeys.indexOf(key) > -1
-      ? self.encodeKey(ltgt[key], opts)
+      ? self.encodeKey(ltgt[key], ltgt)
       : ltgt[key]
   });
   return ret;

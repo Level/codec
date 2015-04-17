@@ -31,9 +31,9 @@ var codec = new Codec(db.options);
 
   Encode `batch` ops with given `opts`.
 
-### #encodeLtgt(ltgt[, opts])
+### #encodeLtgt(ltgt)
 
-  Encode the ltgt values of option object `ltgt` with given `opts`.
+  Encode the ltgt values of option object `ltgt`.
 
 ### #decodeKey(key[, opts])
 
