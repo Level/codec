@@ -43,6 +43,10 @@ var codec = new Codec(db.options);
 
   Decode `value` with given `opts`.
 
+### #createDecodeStream([opts])
+
+  Create a transform stream that decodes incoming key value pairs, passed from readable streams created by levelup's `create*Stream`.
+
 ### #keyAsBuffer([opts])
 
   Check whether `opts` and the global `opts` call for a binary key encoding.
