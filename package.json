@@ -10,8 +10,5 @@
   "scripts": {
     "test": "make test"
   },
-  "dependencies": {
-    "level-errors": "^1.0.3",
-    "readable-stream": "^1.0.33"
-  }
+  "dependencies": {}
 }

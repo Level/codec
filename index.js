@@ -1,5 +1,4 @@
 var encodings = require('./lib/encodings');
-var Decoder = require('./lib/decoder');
 
 module.exports = Codec;
 
@@ -71,10 +70,6 @@ Codec.prototype.encodeLtgt = function(ltgt){
       : ltgt[key]
   });
   return ret;
-};
-
-Codec.prototype.createDecodeStream = function(opts){
-  return new Decoder(this, opts);
 };
 
 Codec.prototype.createStreamDecoder = function(opts){
