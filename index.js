@@ -1,5 +1,4 @@
 var encodings = require('./lib/encodings');
-var Decoder = require('./lib/decoder');
 
 module.exports = Codec;
 
@@ -73,8 +72,27 @@ Codec.prototype.encodeLtgt = function(ltgt){
   return ret;
 };
 
-Codec.prototype.createDecodeStream = function(opts){
-  return new Decoder(this, opts);
+Codec.prototype.createStreamDecoder = function(opts){
+  var self = this;
+
+  if (opts.keys && opts.values) {
+    return function(key, value){
+      return {
+        key: self.decodeKey(key, opts),
+        value: self.decodeValue(value, opts)
+      };
+    };
+  } else if (opts.keys) {
+    return function(key) {
+      return self.decodeKey(key, opts);
+    }; 
+  } else if (opts.values) {
+    return function(_, value){
+      return self.decodeValue(value, opts);
+    }
+  } else {
+    return function(){};
+  }
 };
 
 Codec.prototype.keyAsBuffer = function(opts){

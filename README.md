@@ -43,9 +43,9 @@ var codec = new Codec(db.options);
 
   Decode `value` with given `opts`.
 
-### #createDecodeStream([opts])
+### #createStreamDecoder([opts])
 
-  Create a transform stream that decodes incoming key value pairs, passed from readable streams created by levelup's `create*Stream`.
+  Create a function with signature `(key, value)`, that for each key/value pair returned from a levelup read stream returns the decoded value to be emitted.
 
 ### #keyAsBuffer([opts])
 
