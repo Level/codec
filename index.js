@@ -20,9 +20,10 @@ Codec.prototype._keyEncoding = function(opts, batchOpts){
 };
 
 Codec.prototype._valueEncoding = function(opts, batchOpts){
-  return this._encoding(batchOpts && batchOpts.valueEncoding
-    || opts && opts.valueEncoding
-    || this.opts.valueEncoding);
+  return this._encoding(
+    batchOpts && (batchOpts.valueEncoding || batchOpts.encoding)
+    || opts && (opts.valueEncoding || opts.encoding)
+    || (this.opts.valueEncoding || this.opts.encoding));
 };
 
 Codec.prototype.encodeKey = function(key, opts, batchOpts){
