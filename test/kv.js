@@ -69,3 +69,37 @@ test('decode value', function(t){
   t.end();
 });
 
+test('encode value - legacy', function(t){
+  var codec = new Codec({ encoding: 'hex' });
+
+  var buf = codec.encodeValue('686579', {});
+  t.equal(buf.toString(), 'hey');
+
+  buf = codec.encodeValue('686579');
+  t.equal(buf.toString(), 'hey');
+
+  buf = codec.encodeValue('686579', {
+    encoding: 'binary'
+  });
+  t.equal(buf.toString(), '686579');
+
+  t.end();
+});
+
+test('decode value - legacy', function(t){
+  var codec = new Codec({ encoding: 'hex' });
+
+  var buf = codec.decodeValue(new Buffer('hey'), {});
+  t.equal(buf, '686579');
+
+  buf = codec.decodeValue(new Buffer('hey'));
+  t.equal(buf, '686579');
+
+  buf = codec.decodeValue(new Buffer('hey'), {
+    encoding: 'binary'
+  });
+  t.equal(buf.toString(), 'hey');
+
+  t.end();
+});
+
