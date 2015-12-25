@@ -5,7 +5,7 @@
   "description": "Levelup's encoding logic",
   "license": "MIT",
   "devDependencies": {
-    "tape": "^3.5.0"
+    "tape": "^4.3.0"
   },
   "scripts": {
     "test": "make test"
