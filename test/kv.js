@@ -15,6 +15,11 @@ test('encode key', function(t){
   });
   t.equal(buf.toString(), '686579');
 
+  buf = codec.encodeKey({ foo: 'bar' }, {
+    keyEncoding: 'none'
+  });
+  t.deepEqual(buf, { foo: 'bar' });
+
   t.end();
 });
 
