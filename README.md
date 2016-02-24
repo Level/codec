@@ -70,6 +70,20 @@ var codec = new Codec(db.options);
 }
 ```
 
+  Currently supported encodings:
+
+  - utf8
+  - json
+  - binary
+  - hex
+  - ascii
+  - base64
+  - ucs2
+  - ucs-2
+  - utf16le
+  - utf-16le
+  - none (bypass level-codec)
+
 ## Publishers
 
 * [@juliangruber](https://github.com/juliangruber)
