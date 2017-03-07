@@ -4,7 +4,6 @@ module.exports = Codec;
 
 function Codec(opts){
   this.opts = opts || {};
-  this.encodings = encodings;
 }
 
 Codec.prototype._encoding = function(encoding){
