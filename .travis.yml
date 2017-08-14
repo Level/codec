@@ -1,8 +1,13 @@
 language: node_js
+
 node_js:
-  - "0.10"
+  - "8"
+  - "7"
+  - "6"
+  - "5"
+  - "4"
   - "0.12"
-  - "iojs"
+
 branches:
   only:
     - master
