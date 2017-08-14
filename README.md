@@ -6,6 +6,7 @@
 **[LevelUP's](https://github.com/rvagg/node-levelup) encoding logic.**
 
 [![Build Status](https://travis-ci.org/Level/codec.png)](https://travis-ci.org/Level/codec)
+[![Greenkeeper badge](https://badges.greenkeeper.io/Level/codec.svg)](https://greenkeeper.io/)
 
 ## API
 
