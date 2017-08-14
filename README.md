@@ -1,6 +1,8 @@
 
 # level-codec
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/Level/codec.svg)](https://greenkeeper.io/)
+
 <img alt="LevelDB Logo" height="100" src="http://leveldb.org/img/logo.svg">
 
 **[LevelUP's](https://github.com/rvagg/node-levelup) encoding logic.**
