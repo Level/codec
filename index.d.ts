@@ -1,15 +1,15 @@
 
 declare namespace codec {
-  interface CodecEncoder {
-    encode: (val: any) => any;
-    decode: (val: any) => any;
+  interface CodecEncoder<I=any> {
+    encode: (val: I) => any
+    decode: (val: any) => I
     buffer: boolean
     type: string
   }
 
-  interface CodecOptions {
-    keyEncoding?: string | CodecEncoder
-    valueEncoding?: string | CodecEncoder
+  interface CodecOptions<K=any, V=any> {
+    keyEncoding?: string | CodecEncoder<K>
+    valueEncoding?: string | CodecEncoder<V>
   }
 
   interface Codec {
