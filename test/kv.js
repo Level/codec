@@ -71,11 +71,6 @@ test('decode value', function(t){
   });
   t.equal(buf.toString(), 'hey');
 
-  buf = codec.decodeValue(new Buffer('hey'), {
-    valueEncoding: 'utf8'
-  });
-  t.equal(buf, 'hey');
-
   t.end();
 });
 
