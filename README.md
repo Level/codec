@@ -1,12 +1,12 @@
-
 # level-codec
 
-<img alt="LevelDB Logo" height="100" src="http://leveldb.org/img/logo.svg">
+> Encoding logic for [`level(up)`](https://github.com/Level/levelup).
 
-**[LevelUP's](https://github.com/rvagg/node-levelup) encoding logic.**
-
-[![Build Status](https://travis-ci.org/Level/codec.png)](https://travis-ci.org/Level/codec)
-[![Greenkeeper badge](https://badges.greenkeeper.io/Level/codec.svg)](https://greenkeeper.io/)
+[![level badge][level-badge]](https://github.com/level/awesome)
+[![npm](https://img.shields.io/npm/v/level-codec.svg)](https://www.npmjs.com/package/level-codec)
+[![Travis](https://travis-ci.org/Level/codec.svg?branch=master)](https://travis-ci.org/Level/codec)
+[![david](https://david-dm.org/Level/codec.svg)](https://david-dm.org/level/codec)
+[![npm](https://img.shields.io/npm/dm/level-codec.svg)](https://www.npmjs.com/package/level-codec)
 
 ## API
 
@@ -112,10 +112,11 @@ The `type` string should be a unique name.
 
 ## License &amp; copyright
 
-Copyright (c) 2012-2017 LevelUP contributors.
+Copyright (c) 2012-2017 `levelup` contributors.
 
-LevelUP is licensed under the MIT license. All rights not explicitly granted in the MIT license are reserved. See the included LICENSE.md file for more details.
+`levelup` is licensed under the MIT license. All rights not explicitly granted in the MIT license are reserved. See the included LICENSE.md file for more details.
 
+[level-badge]: http://leveldb.org/img/badge.svg
 [`encoding-down`]: https://github.com/level/encoding-down
 [`abstract-leveldown`]: https://github.com/level/abstract-leveldown
 [`leveldown`]: https://github.com/level/leveldown
