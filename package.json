@@ -11,7 +11,7 @@
   "main": "index.js",
   "typings": "index.d.ts",
   "scripts": {
-    "test": "make test && standard"
+    "test": "tape test/*.js && standard"
   },
   "dependencies": {}
 }
