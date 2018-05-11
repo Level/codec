@@ -14,16 +14,15 @@ Codec.prototype._encoding = function (encoding) {
 }
 
 Codec.prototype._keyEncoding = function (opts, batchOpts) {
-  return this._encoding(batchOpts && batchOpts.keyEncoding ||
-    opts && opts.keyEncoding ||
-    this.opts.keyEncoding)
+  return this._encoding((batchOpts && batchOpts.keyEncoding) ||
+                        (opts && opts.keyEncoding) ||
+                        this.opts.keyEncoding)
 }
 
 Codec.prototype._valueEncoding = function (opts, batchOpts) {
-  return this._encoding(
-    batchOpts && (batchOpts.valueEncoding || batchOpts.encoding) ||
-    opts && (opts.valueEncoding || opts.encoding) ||
-    (this.opts.valueEncoding || this.opts.encoding))
+  return this._encoding((batchOpts && (batchOpts.valueEncoding || batchOpts.encoding)) ||
+                        (opts && (opts.valueEncoding || opts.encoding)) ||
+                        (this.opts.valueEncoding || this.opts.encoding))
 }
 
 Codec.prototype.encodeKey = function (key, opts, batchOpts) {
