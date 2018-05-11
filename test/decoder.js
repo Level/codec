@@ -10,7 +10,7 @@ test('createStreamDecoder', function (t) {
       keys: true,
       values: true
     })
-    t.deepEqual(decoder(new Buffer('hey'), '"you"'), {
+    t.deepEqual(decoder(Buffer.from('hey'), '"you"'), {
       key: '686579',
       value: 'you'
     })
@@ -21,7 +21,7 @@ test('createStreamDecoder', function (t) {
     var decoder = codec.createStreamDecoder({
       keys: true
     })
-    t.equal(decoder(new Buffer('hey')), '686579')
+    t.equal(decoder(Buffer.from('hey')), '686579')
     t.end()
   })
 
@@ -30,7 +30,7 @@ test('createStreamDecoder', function (t) {
       valueEncoding: 'hex',
       values: true
     })
-    t.equal(decoder(null, new Buffer('hey')), '686579')
+    t.equal(decoder(null, Buffer.from('hey')), '686579')
     t.end()
   })
 })
@@ -44,7 +44,7 @@ test('createStreamDecoder - legacy', function (t) {
       keys: true,
       values: true
     })
-    t.deepEqual(decoder(new Buffer('hey'), '"you"'), {
+    t.deepEqual(decoder(Buffer.from('hey'), '"you"'), {
       key: '686579',
       value: 'you'
     })
@@ -55,7 +55,7 @@ test('createStreamDecoder - legacy', function (t) {
     var decoder = codec.createStreamDecoder({
       keys: true
     })
-    t.equal(decoder(new Buffer('hey')), '686579')
+    t.equal(decoder(Buffer.from('hey')), '686579')
     t.end()
   })
 
@@ -64,7 +64,7 @@ test('createStreamDecoder - legacy', function (t) {
       encoding: 'hex',
       values: true
     })
-    t.equal(decoder(null, new Buffer('hey')), '686579')
+    t.equal(decoder(null, Buffer.from('hey')), '686579')
     t.end()
   })
 })

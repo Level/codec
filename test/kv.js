@@ -43,13 +43,13 @@ test('encode value', function (t) {
 test('decode key', function (t) {
   var codec = new Codec({ keyEncoding: 'hex' })
 
-  var buf = codec.decodeKey(new Buffer('hey'), {})
+  var buf = codec.decodeKey(Buffer.from('hey'), {})
   t.equal(buf, '686579')
 
-  buf = codec.decodeKey(new Buffer('hey'))
+  buf = codec.decodeKey(Buffer.from('hey'))
   t.equal(buf, '686579')
 
-  buf = codec.decodeKey(new Buffer('hey'), {
+  buf = codec.decodeKey(Buffer.from('hey'), {
     keyEncoding: 'binary'
   })
   t.equal(buf.toString(), 'hey')
@@ -60,13 +60,13 @@ test('decode key', function (t) {
 test('decode value', function (t) {
   var codec = new Codec({ valueEncoding: 'hex' })
 
-  var buf = codec.decodeValue(new Buffer('hey'), {})
+  var buf = codec.decodeValue(Buffer.from('hey'), {})
   t.equal(buf, '686579')
 
-  buf = codec.decodeValue(new Buffer('hey'))
+  buf = codec.decodeValue(Buffer.from('hey'))
   t.equal(buf, '686579')
 
-  buf = codec.decodeValue(new Buffer('hey'), {
+  buf = codec.decodeValue(Buffer.from('hey'), {
     valueEncoding: 'binary'
   })
   t.equal(buf.toString(), 'hey')
@@ -94,13 +94,13 @@ test('encode value - legacy', function (t) {
 test('decode value - legacy', function (t) {
   var codec = new Codec({ encoding: 'hex' })
 
-  var buf = codec.decodeValue(new Buffer('hey'), {})
+  var buf = codec.decodeValue(Buffer.from('hey'), {})
   t.equal(buf, '686579')
 
-  buf = codec.decodeValue(new Buffer('hey'))
+  buf = codec.decodeValue(Buffer.from('hey'))
   t.equal(buf, '686579')
 
-  buf = codec.decodeValue(new Buffer('hey'), {
+  buf = codec.decodeValue(Buffer.from('hey'), {
     encoding: 'binary'
   })
   t.equal(buf.toString(), 'hey')
