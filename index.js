@@ -3,6 +3,9 @@ var encodings = require('./lib/encodings')
 module.exports = Codec
 
 function Codec (opts) {
+  if (!(this instanceof Codec)) {
+    return new Codec(opts)
+  }
   this.opts = opts || {}
   this.encodings = encodings
 }
