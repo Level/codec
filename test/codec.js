@@ -8,3 +8,11 @@ test('codec', function (t) {
   t.notOk(codec.keyAsBuffer())
   t.end()
 })
+
+test('codec, new not needed', function (t) {
+  var codec = Codec({ keyEncoding: 'hex' })
+  t.ok(codec.keyAsBuffer())
+  codec = Codec()
+  t.notOk(codec.keyAsBuffer())
+  t.end()
+})
