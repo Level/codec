@@ -5,12 +5,13 @@
   "description": "Levelup's encoding logic",
   "license": "MIT",
   "devDependencies": {
+    "standard": "^11.0.1",
     "tape": "^4.3.0"
   },
   "main": "index.js",
   "typings": "index.d.ts",
   "scripts": {
-    "test": "make test"
+    "test": "tape test/*.js && standard"
   },
   "dependencies": {}
 }
