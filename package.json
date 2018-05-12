@@ -13,5 +13,8 @@
   "scripts": {
     "test": "tape test/*.js && standard"
   },
+  "engines": {
+    "node": ">=4"
+  },
   "dependencies": {}
 }

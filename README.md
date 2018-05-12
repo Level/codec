@@ -4,61 +4,67 @@
 
 [![level badge][level-badge]](https://github.com/level/awesome)
 [![npm](https://img.shields.io/npm/v/level-codec.svg)](https://www.npmjs.com/package/level-codec)
+![Node version](https://img.shields.io/node/v/level-codec.svg)
 [![Travis](https://travis-ci.org/Level/codec.svg?branch=master)](https://travis-ci.org/Level/codec)
 [![david](https://david-dm.org/Level/codec.svg)](https://david-dm.org/level/codec)
 [![npm](https://img.shields.io/npm/dm/level-codec.svg)](https://www.npmjs.com/package/level-codec)
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+
+## Usage
+
+```js
+const Codec = require('level-codec')
+const codec = Codec({ keyEncoding: 'json' })
+const key = codec.encodeKey({ foo: 'bar' })
+console.log(key) // -> '{"foo":"bar"}'
+console.log(codec.decodeKey(key)) // -> { foo: 'bar' }
+```
 
 ## API
 
-### Codec([opts])
+### `codec = Codec([opts])`
 
-  Create a new codec, with a global options object.
+Create a new codec, with a global options object.
 
-  This could be something like
+### `codec.encodeKey(key[, opts])`
 
-```js
-var codec = new Codec(db.options);
-```
+Encode `key` with given `opts`.
 
-### #encodeKey(key[, opts])
+### `codec.encodeValue(value[, opts])`
 
-  Encode `key` with given `opts`.
+Encode `value` with given `opts`.
 
-### #encodeValue(value[, opts])
+### `codec.encodeBatch(batch[, opts])`
 
-  Encode `value` with given `opts`.
+Encode `batch` ops with given `opts`.
 
-### #encodeBatch(batch[, opts])
+### `codec.encodeLtgt(ltgt)`
 
-  Encode `batch` ops with given `opts`.
+Encode the ltgt values of option object `ltgt`.
 
-### #encodeLtgt(ltgt)
+### `codec.decodeKey(key[, opts])`
 
-  Encode the ltgt values of option object `ltgt`.
+Decode `key` with given `opts`.
 
-### #decodeKey(key[, opts])
+### `codec.decodeValue(value[, opts])`
 
-  Decode `key` with given `opts`.
+Decode `value` with given `opts`.
 
-### #decodeValue(value[, opts])
+### `codec.createStreamDecoder([opts])`
 
-  Decode `value` with given `opts`.
+Create a function with signature `(key, value)`, that for each key-value pair returned from a levelup read stream returns the decoded value to be emitted.
 
-### #createStreamDecoder([opts])
+### `codec.keyAsBuffer([opts])`
 
-  Create a function with signature `(key, value)`, that for each key/value pair returned from a levelup read stream returns the decoded value to be emitted.
+Check whether `opts` and the global `opts` call for a binary key encoding.
 
-### #keyAsBuffer([opts])
+### `codec.valueAsBuffer([opts])`
 
-  Check whether `opts` and the global `opts` call for a binary key encoding.
+Check whether `opts` and the global `opts` call for a binary value encoding.
 
-### #valueAsBuffer([opts])
+### `codec.encodings`
 
-  Check whether `opts` and the global `opts` call for a binary value encoding.
-
-### #encodings
-
-  The builtin encodings as object of form
+The builtin encodings as object of form
 
 ```js
 {
@@ -68,7 +74,7 @@ var codec = new Codec(db.options);
 
 See below for a list and the format of `encoding`.
 
-## Builtin encodings
+## Builtin Encodings
 
 | Type     | Input                        | Stored as         | Output
 |:---------|:-----------------------------|:------------------|:------
@@ -80,7 +86,7 @@ See below for a list and the format of `encoding`.
 
 <sup>\*</sup> Stores may have their own type coercion. Whether type information is preserved depends on the [`abstract-leveldown`] implementation as well as the underlying storage (`LevelDB`, `IndexedDB`, etc).
 
-## Encoding format
+## Encoding Format
 
 An encoding is an object of the form:
 
@@ -105,16 +111,11 @@ To explain this in the grand scheme of things, consider a store like [`leveldown
 
 The `type` string should be a unique name.
 
-## Publishers
+## License
 
-* [@juliangruber](https://github.com/juliangruber)
-* [@ralphtheninja](https://github.com/ralphtheninja)
+Copyright (c) 2012-2018 `level-codec` contributors.
 
-## License &amp; copyright
-
-Copyright (c) 2012-2017 `levelup` contributors.
-
-`levelup` is licensed under the MIT license. All rights not explicitly granted in the MIT license are reserved. See the included LICENSE.md file for more details.
+`level-codec` is licensed under the MIT license. All rights not explicitly granted in the MIT license are reserved. See the included LICENSE.md file for more details.
 
 [level-badge]: http://leveldb.org/img/badge.svg
 [`encoding-down`]: https://github.com/level/encoding-down
