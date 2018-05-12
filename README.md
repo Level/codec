@@ -12,7 +12,7 @@
 
 ## API
 
-### `const codec = Codec([opts])`
+### `codec = Codec([opts])`
 
 Create a new codec, with a global options object.
 
