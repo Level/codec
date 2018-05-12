@@ -42,7 +42,7 @@ Decode `value` with given `opts`.
 
 ### `codec.createStreamDecoder([opts])`
 
-Create a function with signature `(key, value)`, that for each key/value pair returned from a levelup read stream returns the decoded value to be emitted.
+Create a function with signature `(key, value)`, that for each key-value pair returned from a levelup read stream returns the decoded value to be emitted.
 
 ### `codec.keyAsBuffer([opts])`
 
