@@ -101,9 +101,9 @@ The `type` string should be a unique name.
 
 ## License &amp; Copyright
 
-Copyright (c) 2012-2017 `levelup` contributors.
+Copyright (c) 2012-2018 `level-codec` contributors.
 
-`levelup` is licensed under the MIT license. All rights not explicitly granted in the MIT license are reserved. See the included LICENSE.md file for more details.
+`level-codec` is licensed under the MIT license. All rights not explicitly granted in the MIT license are reserved. See the included LICENSE.md file for more details.
 
 [level-badge]: http://leveldb.org/img/badge.svg
 [`encoding-down`]: https://github.com/level/encoding-down
