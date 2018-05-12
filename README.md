@@ -10,55 +10,49 @@
 
 ## API
 
-### Codec([opts])
+### `const codec = Codec([opts])`
 
-  Create a new codec, with a global options object.
+Create a new codec, with a global options object.
 
-  This could be something like
+### `codec.encodeKey(key[, opts])`
 
-```js
-var codec = new Codec(db.options);
-```
+Encode `key` with given `opts`.
 
-### #encodeKey(key[, opts])
+### `codec.encodeValue(value[, opts])`
 
-  Encode `key` with given `opts`.
+Encode `value` with given `opts`.
 
-### #encodeValue(value[, opts])
+### `codec.encodeBatch(batch[, opts])`
 
-  Encode `value` with given `opts`.
+Encode `batch` ops with given `opts`.
 
-### #encodeBatch(batch[, opts])
+### `codec.encodeLtgt(ltgt)`
 
-  Encode `batch` ops with given `opts`.
+Encode the ltgt values of option object `ltgt`.
 
-### #encodeLtgt(ltgt)
+### `codec.decodeKey(key[, opts])`
 
-  Encode the ltgt values of option object `ltgt`.
+Decode `key` with given `opts`.
 
-### #decodeKey(key[, opts])
+### `codec.decodeValue(value[, opts])`
 
-  Decode `key` with given `opts`.
+Decode `value` with given `opts`.
 
-### #decodeValue(value[, opts])
+### `codec.createStreamDecoder([opts])`
 
-  Decode `value` with given `opts`.
+Create a function with signature `(key, value)`, that for each key/value pair returned from a levelup read stream returns the decoded value to be emitted.
 
-### #createStreamDecoder([opts])
+### `codec.keyAsBuffer([opts])`
 
-  Create a function with signature `(key, value)`, that for each key/value pair returned from a levelup read stream returns the decoded value to be emitted.
+Check whether `opts` and the global `opts` call for a binary key encoding.
 
-### #keyAsBuffer([opts])
+### `codec.valueAsBuffer([opts])`
 
-  Check whether `opts` and the global `opts` call for a binary key encoding.
+Check whether `opts` and the global `opts` call for a binary value encoding.
 
-### #valueAsBuffer([opts])
+### `codec.encodings`
 
-  Check whether `opts` and the global `opts` call for a binary value encoding.
-
-### #encodings
-
-  The builtin encodings as object of form
+The builtin encodings as object of form
 
 ```js
 {
