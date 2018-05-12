@@ -10,6 +10,16 @@
 [![npm](https://img.shields.io/npm/dm/level-codec.svg)](https://www.npmjs.com/package/level-codec)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
+## Usage
+
+```js
+const Codec = require('level-codec')
+const codec = Codec({ keyEncoding: 'json' })
+const key = codec.encodeKey({ foo: 'bar' })
+console.log(key) // -> '{"foo":"bar"}'
+console.log(codec.decodeKey(key)) // -> { foo: 'bar' }
+```
+
 ## API
 
 ### `codec = Codec([opts])`
