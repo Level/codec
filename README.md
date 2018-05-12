@@ -101,7 +101,7 @@ To explain this in the grand scheme of things, consider a store like [`leveldown
 
 The `type` string should be a unique name.
 
-## License &amp; Copyright
+## License
 
 Copyright (c) 2012-2018 `level-codec` contributors.
 
