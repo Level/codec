@@ -62,7 +62,7 @@ The builtin encodings as object of form
 
 See below for a list and the format of `encoding`.
 
-## Builtin encodings
+## Builtin Encodings
 
 | Type     | Input                        | Stored as         | Output
 |:---------|:-----------------------------|:------------------|:------
@@ -74,7 +74,7 @@ See below for a list and the format of `encoding`.
 
 <sup>\*</sup> Stores may have their own type coercion. Whether type information is preserved depends on the [`abstract-leveldown`] implementation as well as the underlying storage (`LevelDB`, `IndexedDB`, etc).
 
-## Encoding format
+## Encoding Format
 
 An encoding is an object of the form:
 
@@ -99,7 +99,7 @@ To explain this in the grand scheme of things, consider a store like [`leveldown
 
 The `type` string should be a unique name.
 
-## License &amp; copyright
+## License &amp; Copyright
 
 Copyright (c) 2012-2017 `levelup` contributors.
 
