@@ -4,6 +4,7 @@
 
 [![level badge][level-badge]](https://github.com/level/awesome)
 [![npm](https://img.shields.io/npm/v/level-codec.svg)](https://www.npmjs.com/package/level-codec)
+![Node version](https://img.shields.io/node/v/level-codec.svg)
 [![Travis](https://travis-ci.org/Level/codec.svg?branch=master)](https://travis-ci.org/Level/codec)
 [![david](https://david-dm.org/Level/codec.svg)](https://david-dm.org/level/codec)
 [![npm](https://img.shields.io/npm/dm/level-codec.svg)](https://www.npmjs.com/package/level-codec)
