@@ -8,6 +8,7 @@
 [![Travis](https://travis-ci.org/Level/codec.svg?branch=master)](https://travis-ci.org/Level/codec)
 [![david](https://david-dm.org/Level/codec.svg)](https://david-dm.org/level/codec)
 [![npm](https://img.shields.io/npm/dm/level-codec.svg)](https://www.npmjs.com/package/level-codec)
+[![Coverage Status](https://coveralls.io/repos/github/Level/codec/badge.svg)](https://coveralls.io/github/Level/codec)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Usage
