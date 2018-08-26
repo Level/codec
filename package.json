@@ -11,7 +11,6 @@
     "tape": "^4.3.0"
   },
   "main": "index.js",
-  "typings": "index.d.ts",
   "scripts": {
     "test": "standard && nyc tape test/*.js",
     "coverage": "nyc report --reporter=text-lcov | coveralls"
