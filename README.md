@@ -77,13 +77,13 @@ See below for a list and the format of `encoding`.
 
 ## Builtin Encodings
 
-| Type     | Input                        | Stored as         | Output
-|:---------|:-----------------------------|:------------------|:------
-| `utf8`   | String or Buffer             | String or Buffer  | String
-| `json`   | Any JSON type                | JSON string       | Input
-| `binary` | Buffer, string or byte array | Buffer            | As stored
-| `hex`<br>`ascii`<br>`base64`<br>`ucs2`<br>`utf16le`<br>`utf-16le` | String or Buffer | Buffer | String
-| `none` a.k.a. `id`  | Any type (bypass encoding)   | Input\*            | As stored
+| Type                                                              | Input                        | Stored as        | Output    |
+| :---------------------------------------------------------------- | :--------------------------- | :--------------- | :-------- |
+| `utf8`                                                            | String or Buffer             | String or Buffer | String    |
+| `json`                                                            | Any JSON type                | JSON string      | Input     |
+| `binary`                                                          | Buffer, string or byte array | Buffer           | As stored |
+| `hex`<br>`ascii`<br>`base64`<br>`ucs2`<br>`utf16le`<br>`utf-16le` | String or Buffer             | Buffer           | String    |
+| `none` a.k.a. `id`                                                | Any type (bypass encoding)   | Input\*          | As stored |
 
 <sup>\*</sup> Stores may have their own type coercion. Whether type information is preserved depends on the [`abstract-leveldown`] implementation as well as the underlying storage (`LevelDB`, `IndexedDB`, etc).
 
@@ -114,11 +114,12 @@ The `type` string should be a unique name.
 
 ## License
 
-Copyright (c) 2012-present `level-codec` contributors.
-
-`level-codec` is licensed under the MIT license. All rights not explicitly granted in the MIT license are reserved. See the included LICENSE.md file for more details.
+[MIT](LICENSE.md) © 2012-present [Contributors](CONTRIBUTORS.md).
 
 [level-badge]: http://leveldb.org/img/badge.svg
+
 [`encoding-down`]: https://github.com/level/encoding-down
+
 [`abstract-leveldown`]: https://github.com/level/abstract-leveldown
+
 [`leveldown`]: https://github.com/level/leveldown
