@@ -114,9 +114,7 @@ The `type` string should be a unique name.
 
 ## License
 
-Copyright (c) 2012-present `level-codec` contributors.
-
-`level-codec` is licensed under the MIT license. All rights not explicitly granted in the MIT license are reserved. See the included LICENSE.md file for more details.
+[MIT](LICENSE.md) © 2012-present [Contributors](CONTRIBUTORS.md).
 
 [level-badge]: http://leveldb.org/img/badge.svg
 [`encoding-down`]: https://github.com/level/encoding-down
