@@ -1,9 +1,15 @@
 {
   "name": "level-codec",
-  "repository": "Level/codec",
   "version": "9.0.0",
   "description": "Levelup's encoding logic",
   "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard && hallmark && nyc tape test/*.js",
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "hallmark": "hallmark --fix"
+  },
+  "dependencies": {},
   "devDependencies": {
     "coveralls": "^3.0.2",
     "hallmark": "^0.1.0",
@@ -12,17 +18,15 @@
     "standard": "^12.0.0",
     "tape": "^4.3.0"
   },
-  "main": "index.js",
-  "scripts": {
-    "test": "standard && hallmark && nyc tape test/*.js",
-    "coverage": "nyc report --reporter=text-lcov | coveralls",
-    "hallmark": "hallmark --fix"
-  },
   "hallmark": {
     "community": "level-community"
   },
+  "repository": "Level/codec",
+  "homepage": "https://github.com/Level/codec",
+  "keywords": [
+    "level"
+  ],
   "engines": {
     "node": ">=6"
-  },
-  "dependencies": {}
+  }
 }
