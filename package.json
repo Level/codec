@@ -22,6 +22,7 @@
     "community": "level-community"
   },
   "repository": "Level/codec",
+  "homepage": "https://github.com/Level/codec",
   "engines": {
     "node": ">=6"
   }
