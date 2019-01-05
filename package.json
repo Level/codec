@@ -23,6 +23,9 @@
   },
   "repository": "Level/codec",
   "homepage": "https://github.com/Level/codec",
+  "keywords": [
+    "level"
+  ],
   "engines": {
     "node": ">=6"
   }
