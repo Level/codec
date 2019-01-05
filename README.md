@@ -112,6 +112,14 @@ To explain this in the grand scheme of things, consider a store like [`leveldown
 
 The `type` string should be a unique name.
 
+## Contributing
+
+[`Level/codec`](https://github.com/Level/codec) is an **OPEN Open Source Project**. This means that:
+
+> Individuals making significant and valuable contributions are given commit-access to the project to contribute as they see fit. This project is more like an open wiki than a standard guarded open source project.
+
+See the [Contribution Guide](https://github.com/Level/community/blob/master/CONTRIBUTING.md) for more details.
+
 ## License
 
 [MIT](LICENSE.md) © 2012-present [Contributors](CONTRIBUTORS.md).
