@@ -2,11 +2,10 @@
 
 > Encoding logic for [`level(up)`](https://github.com/Level/levelup).
 
-[![level badge][level-badge]](https://github.com/level/awesome)
+[![level badge][level-badge]](https://github.com/Level/awesome)
 [![npm](https://img.shields.io/npm/v/level-codec.svg?label=&logo=npm)](https://www.npmjs.com/package/level-codec)
 [![Node version](https://img.shields.io/node/v/level-codec.svg)](https://www.npmjs.com/package/level-codec)
-[![Travis](https://travis-ci.org/Level/codec.svg?branch=master)](https://travis-ci.org/Level/codec)
-[![david](https://david-dm.org/Level/codec.svg)](https://david-dm.org/level/codec)
+[![Travis](https://img.shields.io/travis/Level/codec.svg?logo=travis&label=)](https://travis-ci.org/Level/codec)
 [![npm](https://img.shields.io/npm/dm/level-codec.svg?label=dl)](https://www.npmjs.com/package/level-codec)
 [![Coverage Status](https://coveralls.io/repos/github/Level/codec/badge.svg)](https://coveralls.io/github/Level/codec)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
@@ -140,8 +139,8 @@ To sustain [`Level`](https://github.com/Level) and its activities, become a back
 
 [level-badge]: http://leveldb.org/img/badge.svg
 
-[`encoding-down`]: https://github.com/level/encoding-down
+[`encoding-down`]: https://github.com/Level/encoding-down
 
-[`abstract-leveldown`]: https://github.com/level/abstract-leveldown
+[`abstract-leveldown`]: https://github.com/Level/abstract-leveldown
 
-[`leveldown`]: https://github.com/level/leveldown
+[`leveldown`]: https://github.com/Level/leveldown
