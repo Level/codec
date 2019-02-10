@@ -4,6 +4,8 @@ var Codec = require('..')
 test('createStreamDecoder', function (t) {
   var codec = new Codec({ keyEncoding: 'hex' })
 
+  t.plan(3)
+
   t.test('keys and values', function (t) {
     var decoder = codec.createStreamDecoder({
       valueEncoding: 'json',
@@ -37,6 +39,8 @@ test('createStreamDecoder', function (t) {
 
 test('createStreamDecoder - legacy', function (t) {
   var codec = new Codec({ keyEncoding: 'hex' })
+
+  t.plan(3)
 
   t.test('keys and values', function (t) {
     var decoder = codec.createStreamDecoder({
