@@ -14,6 +14,8 @@
 
 ## Usage
 
+**If you are upgrading:** please see [`UPGRADING.md`](UPGRADING.md).
+
 ```js
 const Codec = require('level-codec')
 const codec = Codec({ keyEncoding: 'json' })
