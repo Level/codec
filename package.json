@@ -1,7 +1,7 @@
 {
   "name": "level-codec",
   "version": "9.0.0",
-  "description": "Levelup's encoding logic",
+  "description": "Encode keys, values and range options, with built-in or custom encodings",
   "license": "MIT",
   "main": "index.js",
   "scripts": {
