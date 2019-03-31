@@ -1,6 +1,6 @@
 # level-codec
 
-> Encoding logic for [`level(up)`](https://github.com/Level/levelup).
+> Encode keys, values and range options, with built-in or custom encodings.
 
 [![level badge][level-badge]](https://github.com/Level/awesome)
 [![npm](https://img.shields.io/npm/v/level-codec.svg?label=&logo=npm)](https://www.npmjs.com/package/level-codec)
@@ -13,6 +13,8 @@
 [![Sponsors on Open Collective](https://opencollective.com/level/sponsors/badge.svg?color=orange)](#sponsors)
 
 ## Usage
+
+**If you are upgrading:** please see [`UPGRADING.md`](UPGRADING.md).
 
 ```js
 const Codec = require('level-codec')
