@@ -4,6 +4,29 @@ _**If you are upgrading:** please see [`UPGRADING.md`](UPGRADING.md)._
 
 ## [Unreleased][unreleased]
 
+## [10.0.0] - 2019-03-31
+
+### Changed
+
+- Upgrade `standard` devDependency from `^11.0.1` to `^12.0.0` ([#38](https://github.com/Level/codec/issues/38)) ([**@ralphtheninja**](https://github.com/ralphtheninja))
+- Update description in README and `package.json` ([#47](https://github.com/Level/codec/issues/47)) ([**@vweevers**](https://github.com/vweevers))
+- Apply common project tweaks ([#39](https://github.com/Level/codec/issues/39), [#40](https://github.com/Level/codec/issues/40), [#41](https://github.com/Level/codec/issues/41)) ([**@vweevers**](https://github.com/vweevers))
+- Tweak copyright year for less maintenance ([`79d2d02`](https://github.com/Level/codec/commit/79d2d02)) ([**@ralphtheninja**](https://github.com/ralphtheninja))
+
+### Added
+
+- Add `nyc` and `coveralls` ([#36](https://github.com/Level/codec/issues/36), [#44](https://github.com/Level/codec/issues/44)) ([**@ralphtheninja**](https://github.com/ralphtheninja), [**@vweevers**](https://github.com/vweevers))
+- Add `CHANGELOG.md` and `UPGRADING.md` ([#47](https://github.com/Level/codec/issues/47)) ([**@vweevers**](https://github.com/vweevers))
+
+### Removed
+
+- Drop node 9 ([`ffe3f92`](https://github.com/Level/codec/commit/ffe3f92)) ([**@ralphtheninja**](https://github.com/ralphtheninja))
+- Remove typings ([`1cfd23f`](https://github.com/Level/codec/commit/1cfd23f)) ([**@ralphtheninja**](https://github.com/ralphtheninja))
+
+### Fixed
+
+- Fix subtests by adding `t.plan()` ([#46](https://github.com/Level/codec/issues/46)) ([**@vweevers**](https://github.com/vweevers))
+
 ## [9.0.0] - 2018-05-12
 
 ### Changed
@@ -203,7 +226,9 @@ _**If you are upgrading:** please see [`UPGRADING.md`](UPGRADING.md)._
 
 :seedling: Initial release.
 
-[unreleased]: https://github.com/level/level/compare/v9.0.0...HEAD
+[unreleased]: https://github.com/Level/codec/compare/v10.0.0...HEAD
+
+[10.0.0]: https://github.com/Level/codec/compare/v9.0.0...v10.0.0
 
 [9.0.0]: https://github.com/Level/codec/compare/v8.0.0...v9.0.0
 
