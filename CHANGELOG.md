@@ -4,7 +4,7 @@ _**If you are upgrading:** please see [`UPGRADING.md`](UPGRADING.md)._
 
 ## [Unreleased][unreleased]
 
-## [10.0.0] - 2019-03-31
+## [9.0.1] - 2019-04-01
 
 ### Changed
 
@@ -20,8 +20,8 @@ _**If you are upgrading:** please see [`UPGRADING.md`](UPGRADING.md)._
 
 ### Removed
 
-- Drop node 9 ([`ffe3f92`](https://github.com/Level/codec/commit/ffe3f92)) ([**@ralphtheninja**](https://github.com/ralphtheninja))
-- Remove typings ([`1cfd23f`](https://github.com/Level/codec/commit/1cfd23f)) ([**@ralphtheninja**](https://github.com/ralphtheninja))
+- Remove node 9 from travis ([`ffe3f92`](https://github.com/Level/codec/commit/ffe3f92)) ([**@ralphtheninja**](https://github.com/ralphtheninja))
+- Remove experimental typings ([`1cfd23f`](https://github.com/Level/codec/commit/1cfd23f)) ([**@ralphtheninja**](https://github.com/ralphtheninja))
 
 ### Fixed
 
@@ -226,9 +226,9 @@ _**If you are upgrading:** please see [`UPGRADING.md`](UPGRADING.md)._
 
 :seedling: Initial release.
 
-[unreleased]: https://github.com/Level/codec/compare/v10.0.0...HEAD
+[unreleased]: https://github.com/Level/codec/compare/v9.0.1...HEAD
 
-[10.0.0]: https://github.com/Level/codec/compare/v9.0.0...v10.0.0
+[9.0.1]: https://github.com/Level/codec/compare/v9.0.0...v9.0.1
 
 [9.0.0]: https://github.com/Level/codec/compare/v8.0.0...v9.0.0
 
