@@ -2,8 +2,6 @@
 
 _**If you are upgrading:** please see [`UPGRADING.md`](UPGRADING.md)._
 
-## [Unreleased][unreleased]
-
 ## [9.0.1] - 2019-04-01
 
 ### Changed
@@ -225,8 +223,6 @@ _**If you are upgrading:** please see [`UPGRADING.md`](UPGRADING.md)._
 ## 1.0.1 - 2015-03-18
 
 :seedling: Initial release.
-
-[unreleased]: https://github.com/Level/codec/compare/v9.0.1...HEAD
 
 [9.0.1]: https://github.com/Level/codec/compare/v9.0.0...v9.0.1
 
