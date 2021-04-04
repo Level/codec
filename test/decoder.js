@@ -1,13 +1,13 @@
-var test = require('tape')
-var Codec = require('..')
+const test = require('tape')
+const Codec = require('..')
 
 test('createStreamDecoder', function (t) {
-  var codec = new Codec({ keyEncoding: 'hex' })
+  const codec = new Codec({ keyEncoding: 'hex' })
 
   t.plan(3)
 
   t.test('keys and values', function (t) {
-    var decoder = codec.createStreamDecoder({
+    const decoder = codec.createStreamDecoder({
       valueEncoding: 'json',
       keys: true,
       values: true
@@ -20,7 +20,7 @@ test('createStreamDecoder', function (t) {
   })
 
   t.test('keys', function (t) {
-    var decoder = codec.createStreamDecoder({
+    const decoder = codec.createStreamDecoder({
       keys: true
     })
     t.equal(decoder(Buffer.from('hey')), '686579')
@@ -28,7 +28,7 @@ test('createStreamDecoder', function (t) {
   })
 
   t.test('values', function (t) {
-    var decoder = codec.createStreamDecoder({
+    const decoder = codec.createStreamDecoder({
       valueEncoding: 'hex',
       values: true
     })
@@ -38,12 +38,12 @@ test('createStreamDecoder', function (t) {
 })
 
 test('createStreamDecoder - legacy', function (t) {
-  var codec = new Codec({ keyEncoding: 'hex' })
+  const codec = new Codec({ keyEncoding: 'hex' })
 
   t.plan(3)
 
   t.test('keys and values', function (t) {
-    var decoder = codec.createStreamDecoder({
+    const decoder = codec.createStreamDecoder({
       encoding: 'json',
       keys: true,
       values: true
@@ -56,7 +56,7 @@ test('createStreamDecoder - legacy', function (t) {
   })
 
   t.test('keys', function (t) {
-    var decoder = codec.createStreamDecoder({
+    const decoder = codec.createStreamDecoder({
       keys: true
     })
     t.equal(decoder(Buffer.from('hey')), '686579')
@@ -64,7 +64,7 @@ test('createStreamDecoder - legacy', function (t) {
   })
 
   t.test('values', function (t) {
-    var decoder = codec.createStreamDecoder({
+    const decoder = codec.createStreamDecoder({
       encoding: 'hex',
       values: true
     })

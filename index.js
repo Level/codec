@@ -1,4 +1,6 @@
-var encodings = require('./lib/encodings')
+'use strict'
+
+const encodings = require('./lib/encodings')
 
 module.exports = Codec
 
@@ -45,53 +47,48 @@ Codec.prototype.decodeValue = function (value, opts) {
 }
 
 Codec.prototype.encodeBatch = function (ops, opts) {
-  var self = this
-
-  return ops.map(function (_op) {
-    var op = {
+  return ops.map((_op) => {
+    const op = {
       type: _op.type,
-      key: self.encodeKey(_op.key, opts, _op)
+      key: this.encodeKey(_op.key, opts, _op)
     }
-    if (self.keyAsBuffer(opts, _op)) op.keyEncoding = 'binary'
+    if (this.keyAsBuffer(opts, _op)) op.keyEncoding = 'binary'
     if (_op.prefix) op.prefix = _op.prefix
     if ('value' in _op) {
-      op.value = self.encodeValue(_op.value, opts, _op)
-      if (self.valueAsBuffer(opts, _op)) op.valueEncoding = 'binary'
+      op.value = this.encodeValue(_op.value, opts, _op)
+      if (this.valueAsBuffer(opts, _op)) op.valueEncoding = 'binary'
     }
     return op
   })
 }
 
-var ltgtKeys = ['lt', 'gt', 'lte', 'gte', 'start', 'end']
+const ltgtKeys = ['lt', 'gt', 'lte', 'gte', 'start', 'end']
 
 Codec.prototype.encodeLtgt = function (ltgt) {
-  var self = this
-  var ret = {}
-  Object.keys(ltgt).forEach(function (key) {
+  const ret = {}
+  Object.keys(ltgt).forEach((key) => {
     ret[key] = ltgtKeys.indexOf(key) > -1
-      ? self.encodeKey(ltgt[key], ltgt)
+      ? this.encodeKey(ltgt[key], ltgt)
       : ltgt[key]
   })
   return ret
 }
 
 Codec.prototype.createStreamDecoder = function (opts) {
-  var self = this
-
   if (opts.keys && opts.values) {
-    return function (key, value) {
+    return (key, value) => {
       return {
-        key: self.decodeKey(key, opts),
-        value: self.decodeValue(value, opts)
+        key: this.decodeKey(key, opts),
+        value: this.decodeValue(value, opts)
       }
     }
   } else if (opts.keys) {
-    return function (key) {
-      return self.decodeKey(key, opts)
+    return (key) => {
+      return this.decodeKey(key, opts)
     }
   } else if (opts.values) {
-    return function (_, value) {
-      return self.decodeValue(value, opts)
+    return (_, value) => {
+      return this.decodeValue(value, opts)
     }
   } else {
     return function () {}
