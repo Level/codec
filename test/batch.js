@@ -1,15 +1,15 @@
-var test = require('tape')
-var Codec = require('..')
+const test = require('tape')
+const Codec = require('..')
 
 test('batch', function (t) {
-  var codec = new Codec({})
-  var ops = [
+  const codec = new Codec({})
+  const ops = [
     { type: 'put', key: 'string', value: 'string', valueEncoding: 'utf8' },
     { type: 'put', key: 'json', value: {} }
   ]
-  var opsSerialized = JSON.stringify(ops)
+  const opsSerialized = JSON.stringify(ops)
 
-  var encoded = codec.encodeBatch(ops, { valueEncoding: 'json' })
+  let encoded = codec.encodeBatch(ops, { valueEncoding: 'json' })
 
   t.equal(opsSerialized, JSON.stringify(ops), 'ops not changed')
 
@@ -28,14 +28,14 @@ test('batch', function (t) {
 })
 
 test('batch - legacy', function (t) {
-  var codec = new Codec({})
-  var ops = [
+  const codec = new Codec({})
+  const ops = [
     { type: 'put', key: 'string', value: 'string', encoding: 'utf8' },
     { type: 'put', key: 'json', value: {} }
   ]
-  var opsSerialized = JSON.stringify(ops)
+  const opsSerialized = JSON.stringify(ops)
 
-  var encoded = codec.encodeBatch(ops, { encoding: 'json' })
+  let encoded = codec.encodeBatch(ops, { encoding: 'json' })
 
   t.equal(opsSerialized, JSON.stringify(ops), 'ops not changed')
 

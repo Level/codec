@@ -1,14 +1,14 @@
-var test = require('tape')
-var Codec = require('..')
+const test = require('tape')
+const Codec = require('..')
 
 test('encode ltgt', function (t) {
-  var codec = new Codec({ keyEncoding: 'hex' })
+  const codec = new Codec({ keyEncoding: 'hex' })
 
-  var ltgt = {
+  let ltgt = {
     start: '686579',
     lte: '686579'
   }
-  var encoded = codec.encodeLtgt(ltgt)
+  let encoded = codec.encodeLtgt(ltgt)
   t.equal(encoded.start.toString(), 'hey')
   t.equal(encoded.lte.toString(), 'hey')
 

@@ -1,10 +1,10 @@
-var test = require('tape')
-var Codec = require('..')
+const test = require('tape')
+const Codec = require('..')
 
 test('encode key', function (t) {
-  var codec = new Codec({ keyEncoding: 'hex' })
+  const codec = new Codec({ keyEncoding: 'hex' })
 
-  var buf = codec.encodeKey('686579', {})
+  let buf = codec.encodeKey('686579', {})
   t.equal(buf.toString(), 'hey')
 
   buf = codec.encodeKey('686579')
@@ -24,9 +24,9 @@ test('encode key', function (t) {
 })
 
 test('encode value', function (t) {
-  var codec = new Codec({ valueEncoding: 'hex' })
+  const codec = new Codec({ valueEncoding: 'hex' })
 
-  var buf = codec.encodeValue('686579', {})
+  let buf = codec.encodeValue('686579', {})
   t.equal(buf.toString(), 'hey')
 
   buf = codec.encodeValue('686579')
@@ -41,9 +41,9 @@ test('encode value', function (t) {
 })
 
 test('decode key', function (t) {
-  var codec = new Codec({ keyEncoding: 'hex' })
+  const codec = new Codec({ keyEncoding: 'hex' })
 
-  var buf = codec.decodeKey(Buffer.from('hey'), {})
+  let buf = codec.decodeKey(Buffer.from('hey'), {})
   t.equal(buf, '686579')
 
   buf = codec.decodeKey(Buffer.from('hey'))
@@ -58,9 +58,9 @@ test('decode key', function (t) {
 })
 
 test('decode value', function (t) {
-  var codec = new Codec({ valueEncoding: 'hex' })
+  const codec = new Codec({ valueEncoding: 'hex' })
 
-  var buf = codec.decodeValue(Buffer.from('hey'), {})
+  let buf = codec.decodeValue(Buffer.from('hey'), {})
   t.equal(buf, '686579')
 
   buf = codec.decodeValue(Buffer.from('hey'))
@@ -75,9 +75,9 @@ test('decode value', function (t) {
 })
 
 test('encode value - legacy', function (t) {
-  var codec = new Codec({ encoding: 'hex' })
+  const codec = new Codec({ encoding: 'hex' })
 
-  var buf = codec.encodeValue('686579', {})
+  let buf = codec.encodeValue('686579', {})
   t.equal(buf.toString(), 'hey')
 
   buf = codec.encodeValue('686579')
@@ -92,9 +92,9 @@ test('encode value - legacy', function (t) {
 })
 
 test('decode value - legacy', function (t) {
-  var codec = new Codec({ encoding: 'hex' })
+  const codec = new Codec({ encoding: 'hex' })
 
-  var buf = codec.decodeValue(Buffer.from('hey'), {})
+  let buf = codec.decodeValue(Buffer.from('hey'), {})
   t.equal(buf, '686579')
 
   buf = codec.decodeValue(Buffer.from('hey'))
