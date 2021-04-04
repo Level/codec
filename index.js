@@ -62,11 +62,15 @@ Codec.prototype.encodeBatch = function (ops, opts) {
   })
 }
 
-const ltgtKeys = ['lt', 'gt', 'lte', 'gte', 'start', 'end']
+const ltgtKeys = ['lt', 'gt', 'lte', 'gte']
 
 Codec.prototype.encodeLtgt = function (ltgt) {
   const ret = {}
   Object.keys(ltgt).forEach((key) => {
+    if (key === 'start' || key === 'end') {
+      throw new Error('Legacy range options ("start" and "end") have been removed')
+    }
+
     ret[key] = ltgtKeys.indexOf(key) > -1
       ? this.encodeKey(ltgt[key], ltgt)
       : ltgt[key]
