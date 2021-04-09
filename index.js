@@ -1,6 +1,7 @@
 'use strict'
 
 const encodings = require('./lib/encodings')
+const rangeOptions = new Set(['lt', 'gt', 'lte', 'gte'])
 
 module.exports = Codec
 
@@ -62,19 +63,19 @@ Codec.prototype.encodeBatch = function (ops, opts) {
   })
 }
 
-const ltgtKeys = ['lt', 'gt', 'lte', 'gte']
-
 Codec.prototype.encodeLtgt = function (ltgt) {
   const ret = {}
-  Object.keys(ltgt).forEach((key) => {
+
+  for (const key of Object.keys(ltgt)) {
     if (key === 'start' || key === 'end') {
       throw new Error('Legacy range options ("start" and "end") have been removed')
     }
 
-    ret[key] = ltgtKeys.indexOf(key) > -1
+    ret[key] = rangeOptions.has(key)
       ? this.encodeKey(ltgt[key], ltgt)
       : ltgt[key]
-  })
+  }
+
   return ret
 }
 
