@@ -2,6 +2,15 @@
 
 _**If you are upgrading:** please see [`UPGRADING.md`](UPGRADING.md)._
 
+## [10.0.0] - 2021-04-09
+
+### Changed
+
+- **Breaking:** remove legacy range options ([Level/community#86](https://github.com/Level/community/issues/86)) ([`73b19b4`](https://github.com/Level/codec/commit/73b19b4)) (Vincent Weevers)
+- **Breaking:** drop node 6 and 8 ([`38dc04c`](https://github.com/Level/codec/commit/38dc04c)) ([Level/community#98](https://github.com/Level/community/issues/98)) (Vincent Weevers)
+- **Breaking:** modernize syntax & bump `standard` to 16.x ([`874956f`](https://github.com/Level/codec/commit/874956f), [`e3ed6e4`](https://github.com/Level/codec/commit/e3ed6e4)) ([Level/community#98](https://github.com/Level/community/issues/98)) (Vincent Weevers).
+- **Breaking:** bump `buffer` from 15.x to 16.x ([#62](https://github.com/Level/codec/issues/62)) ([Level/community#98](https://github.com/Level/community/issues/98)) ([`78d2ea0`](https://github.com/Level/codec/commit/78d2ea0)) (Alex Potsides).
+
 ## [9.0.2] - 2020-06-26
 
 ### Changed
@@ -235,6 +244,8 @@ _**If you are upgrading:** please see [`UPGRADING.md`](UPGRADING.md)._
 ## 1.0.1 - 2015-03-18
 
 :seedling: Initial release.
+
+[10.0.0]: https://github.com/Level/codec/compare/v9.0.2...v10.0.0
 
 [9.0.2]: https://github.com/Level/codec/compare/v9.0.1...v9.0.2
 

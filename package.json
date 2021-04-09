@@ -1,6 +1,6 @@
 {
   "name": "level-codec",
-  "version": "9.0.2",
+  "version": "10.0.0",
   "description": "Encode keys, values and range options, with built-in or custom encodings",
   "license": "MIT",
   "main": "index.js",
