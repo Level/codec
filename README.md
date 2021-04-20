@@ -5,7 +5,6 @@
 [![level badge][level-badge]](https://github.com/Level/awesome)
 [![npm](https://img.shields.io/npm/v/level-codec.svg?label=&logo=npm)](https://www.npmjs.com/package/level-codec)
 [![Node version](https://img.shields.io/node/v/level-codec.svg)](https://www.npmjs.com/package/level-codec)
-[![Travis](https://img.shields.io/travis/com/Level/codec.svg?logo=travis&label=)](https://travis-ci.com/Level/codec)
 [![npm](https://img.shields.io/npm/dm/level-codec.svg?label=dl)](https://www.npmjs.com/package/level-codec)
 [![Test](https://github.com/Level/codec/actions/workflows/test.yml/badge.svg)](https://github.com/Level/codec/actions/workflows/test.yml)
 [![Coverage Status](https://codecov.io/gh/Level/codec/branch/master/graph/badge.svg)](https://codecov.io/gh/Level/codec)
