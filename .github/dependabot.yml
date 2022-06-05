@@ -6,6 +6,8 @@ updates:
       interval: monthly
     ignore:
       - dependency-name: dependency-check
+      - dependency-name: standard
+      - dependency-name: hallmark
   - package-ecosystem: github-actions
     directory: /
     schedule:
