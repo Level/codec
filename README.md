@@ -1,6 +1,8 @@
 # level-codec
 
-> Encode keys, values and range options, with built-in or custom encodings.
+**Encode keys, values and range options, with built-in or custom encodings.**
+
+> :pushpin: This module will soon be [deprecated](https://github.com/Level/community/issues/113), because it is superseded by [`level-transcoder`](https://github.com/Level/transcoder).
 
 [![level badge][level-badge]](https://github.com/Level/awesome)
 [![npm](https://img.shields.io/npm/v/level-codec.svg?label=&logo=npm)](https://www.npmjs.com/package/level-codec)
