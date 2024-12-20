@@ -1,18 +1,6 @@
 # level-codec
 
-**Encode keys, values and range options, with built-in or custom encodings.**
-
-> :pushpin: This module will soon be [deprecated](https://github.com/Level/community/issues/113), because it is superseded by [`level-transcoder`](https://github.com/Level/transcoder).
-
-[![level badge][level-badge]](https://github.com/Level/awesome)
-[![npm](https://img.shields.io/npm/v/level-codec.svg?label=&logo=npm)](https://www.npmjs.com/package/level-codec)
-[![Node version](https://img.shields.io/node/v/level-codec.svg)](https://www.npmjs.com/package/level-codec)
-[![npm](https://img.shields.io/npm/dm/level-codec.svg?label=dl)](https://www.npmjs.com/package/level-codec)
-[![Test](https://github.com/Level/codec/actions/workflows/test.yml/badge.svg)](https://github.com/Level/codec/actions/workflows/test.yml)
-[![Coverage Status](https://codecov.io/gh/Level/codec/branch/master/graph/badge.svg)](https://codecov.io/gh/Level/codec)
-[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-[![Backers on Open Collective](https://opencollective.com/level/backers/badge.svg?color=orange)](#backers)
-[![Sponsors on Open Collective](https://opencollective.com/level/sponsors/badge.svg?color=orange)](#sponsors)
+**Superseded by [`level-transcoder`](https://github.com/Level/transcoder). Please see [Frequently Asked Questions](https://github.com/Level/community#faq).**
 
 ## Usage
 
@@ -140,8 +128,6 @@ To sustain [`Level`](https://github.com/Level) and its activities, become a back
 ## License
 
 [MIT](LICENSE.md) © 2012-present [Contributors](CONTRIBUTORS.md).
-
-[level-badge]: https://leveljs.org/img/badge.svg
 
 [`encoding-down`]: https://github.com/Level/encoding-down
 
